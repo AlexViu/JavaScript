@@ -1,0 +1,19 @@
+{
+  "name": "textfield",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "-": "^0.0.1",
+    "verbose": "^0.2.3"
+  },
+  "devDependencies": {
+    "electron": "^11.1.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC"
+}
