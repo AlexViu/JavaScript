@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CRUD app</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/photon.min.css">
+  </head>
+
+  <body>
+    <div class="window">
+      <header class="toolbar toolbar-header">
+        <h1 class="title">Clients</h1>
+      </header>
+
+      <div class="window-content">
+        <div class="padded-more">
+            <form>
+                <div class="form-group">
+                  <label>DNI</label>
+                  <input type="text" class="form-control" placeholder="dni" id="dni">
+                </div>
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" class="form-control" placeholder="name" id="name">
+                </div>
+                <div class="form-group">
+                    <label>Teléfono</label>
+                    <input type="text" class="form-control" placeholder="telephone" id="telephone">
+                </div>
+            </form>
+            <button id="btnFirstClient" class="btn btn-primary"><span class="icon icon-to-start"></span></button>
+            <button id="btnPrevious" class="btn btn-primary"><span class="icon icon-left-bold"></span></button>
+            <button id="btnNext" class="btn btn-primary"><span class="icon icon-right-bold"></span></button>
+            <button id="btnLatestClient" class="btn btn-primary"><span class="icon icon-to-end"></span></button>
+            <button id="btnRemove" class="btn btn-primary"><span class="icon icon-erase"></span></button>
+            <button id="btnInsert" class="btn btn-primary"><span class="icon icon-folder"></span></button>
+            <button id="btnUpdate" class="btn btn-primary"><span class="icon icon-floppy"></span></button>
+        </div>
+      </div>
+
+      <footer class="toolbar toolbar-footer">...
+
+      </footer>
+    </div>
+    <script src="./functions.js"></script>
+    </body>
+    </div>
+  </body>
+</html>

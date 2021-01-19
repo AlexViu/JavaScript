@@ -1,0 +1,32 @@
+[
+    {
+    "dni": "11111111",
+    "Name": "customer1",
+    "telephone": "9111111"
+    },
+    {
+    "dni": "22222222",
+    "Name": "customer2",
+    "telephone": "9222222"
+    },
+    {
+    "dni": "33333333",
+    "Name": "client3",
+    "telephone": "9333333"
+    },
+    {
+    "dni": "44444",
+    "Name": "4444",
+    "telephone": "4444"
+    },
+    {
+    "dni": "55555",
+    "Name": "55555",
+    "telephone": "55555"
+    },
+    {
+    "dni": "666666",
+    "Name": "customer 6",
+    "telephone": "666666"
+    }
+]
