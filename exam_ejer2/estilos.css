@@ -1,0 +1,22 @@
+body {
+    background-color: #9cff59;
+}
+
+.wrapper {
+    border: 2px solid #4dc000;
+    border-radius: 5px;
+    background-color: #9cff59;
+   }
+   
+.wrapper > div {
+    border: 2px solid #3324ff;
+    border-radius: 5px;
+    background-color: #8effb0;
+    padding: 1em;
+    Color: #000000;
+   }
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+   }
