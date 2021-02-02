@@ -4,14 +4,15 @@ const mongoose=require('mongoose');
 // this is necessary because mongo supports different types of promises
 mongoose.Promise=global.Promise;
 // connect with the contacts DB
-const url='mongodb+srv://root:PBVbGqYyiNI3VHjg@cluster0.uqgat.mongodb.net/Contacts?retryWrites=true&w=majority'
-mongoose.connect('mongodb: // localhost: 27017 / contacts', {
+const url='mongodb://localhost:27017/contacts'
+mongoose.connect(url, {
 useNewUrlParser:true,
 useCreateIndex: true,
 useUnifiedTopology:true
 }).then(()=>{console.log('connection succesfull')}).catch((err)=>{
     console.log('connection error')
 });
+
 //scheme
 let contactSchema=new mongoose.Schema({
     Name:String,
@@ -19,16 +20,11 @@ let contactSchema=new mongoose.Schema({
     age:Number
     });
 
-    // add documents
-// first we create the contact
-let contact1=new Contact({
-    name:"Boris",
-    telephone:"946112230",
-    age:49
-    });
+//model
+let Contact=mongoose.model('contacts',contactSchema);
 
 //esquem
-let contactSchema = new mongoose.Schema({
+contactSchema = new mongoose.Schema({
         name: {
             type: String,
             required: true,
