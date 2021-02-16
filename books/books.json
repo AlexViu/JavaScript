@@ -1,52 +1,38 @@
 [
     {
-    "title":"Q",
-    "author":"Luther Blissett",
+    "title":"el señor de los anillos la comunidad del anillo",
+    "author":"Peter Jackson",
+    "duration":"178 minutos",
     "img":"0.jpg"
     },
     {
-    "title":"Love in times of anger",
-    "author":"Gabriel Garcia Marquez",
-    "img":"1.jpg"
+    "title":"el señor de los anillos las dos torres",
+    "author":"Peter Jackson",
+    "duration":"235 minutos",
+    "img":"1.jpeg"
     },
     {
-    "title":"Watchmen",
-    "author":"Alan Moore and Dave Gibbons",
-    "img":"2.jpg"
+    "title":"el señor de los anillos el retorno del rey",
+    "author":"Peter Jackson",
+    "duration":"254 minutos",
+    "img":"2.jpeg"
     },
     {
-    "title":"54",
-    "author":"Wu Ming",
-    "img":"3.jpg"
+    "title":"el hobbit un vieaje inesperado",
+    "author":"Peter Jackson",
+    "duration":"182 minutos",
+    "img":"3.jpeg"
     },
     {
-    "title":"The army of sleepwalkers",
-    "author":"Wu Ming",
+    "title":"El hobbit la desolación de Smaug",
+    "author":"Peter Jackson",
+    "duration":"186 minutos",
     "img":"4.jpg"
     },
     {
-    "title":"Maus",
-    "author":"Art Spiegelman",
-    "img":"5.jpg"
-    },
-    {
-    "title":"The Tin Drum",
-    "author":"Günter Grass",
-    "img":"6.jpg"
-    },
-    {
-    "title":"Seventy kilos",
-    "author":"Ramón Palomar",
-    "img":"7.jpg"
-    },
-    {
-    "title":"Manela is the name of Tango",
-    "author":"Almudena Grandes",
-    "img":"8.jpg"
-    },
-    {
-    "title":"The triology of New York",
-    "author":"Paul Auster",
-    "img":"9.jpg"
+    "title":"El hobbit la batalla de los Cinco Ejércitos",
+    "author":"Peter Jackson",
+    "duration":"164 minutos",
+    "img":"5.jpeg"
     }
-    ]
+]

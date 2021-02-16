@@ -10,7 +10,7 @@ let libros = JSON.parse(fichero);
 
 mongoose.Promise=global.Promise;
 // connect with the contacts DB
-const url='mongodb://localhost:27017/books'
+const url='mongodb://localhost:27017/lotr'
 mongoose.connect(url, {
 useNewUrlParser:true,
 useCreateIndex: true,
@@ -20,15 +20,16 @@ useUnifiedTopology:true
 });
 
 //scheme
-let librosSchema=new mongoose.Schema({
+let lotrSchema=new mongoose.Schema({
     title:String,
     author:String,
+    duration:String,
     img:String
     });
 
 
 //esquem
-librosSchema= new mongoose.Schema({
+lotrSchema= new mongoose.Schema({
         title: {
             type: String,
             required: true,
@@ -38,9 +39,14 @@ librosSchema= new mongoose.Schema({
         author: {
             type: String,
             required: true,
-            unique: true,
             trim: true,
         },
+        duration: {
+            type: String,
+            required: true,
+            unique: true,
+            trim: true,
+        },
         img: {
             type: String,
             required: true,
@@ -49,12 +55,13 @@ librosSchema= new mongoose.Schema({
         }
     });
 
-let Libro = mongoose.model('libros',librosSchema);
+let Libro = mongoose.model('libros',lotrSchema);
 let p1;
 libros.forEach(book => {
     let libro = new Libro();
     libro.title = book.title;
     libro.author = book.author;
+    libro.duration = book.duration;
     libro.img = book.img;
     p1=libro.save().then(resultado => {
         console.log("Book is added:", resultado);
