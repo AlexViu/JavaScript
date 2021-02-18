@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Lord of the rings</title>
+  <link rel="stylesheet" href="./css/estilos.css">
+  <link rel="stylesheet" href="./css/photon.css">
+  <!--Requerido para XEL-->
+  <link rel="stylesheet" href="node_modules/xel/themes/material.css">
+  <script src="./node_modules/xel/xel.min.js"></script>
+  <!--Estilos para el dialog desplegable-->
+  <style>
+    dialog {
+      width: 300px;
+      height: 100%;
+      right: 0;
+      left: auto;
+      background: #00ffff;
+      border-radius: 15px 0 0 15px;
+      opacity: 0.85;
+      border: 1px solid #242525;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <div class="window">
+    <header class="toolbar toolbar-header" style="text-align: center;">
+       <!--Botones del HEADER-->
+       <x-box>
+        <x-throbber type="spin" id="spin"></x-throbber>
+        <!--Boton TODOS-->
+        <x-button skin="textured" id="btnTodos" style="margin-left:5%;">
+          <x-box>
+            <x-icon name="home"></x-icon>
+          </x-box>
+        </x-button>
+        
+        <!--Botón BÚSQUEDAS-->
+        <x-button skin="textured" style="margin-left:5%">
+          <x-box>
+            <x-icon name="search"></x-icon>
+          </x-box>
+
+          <!--Panel BÚSQUEDAS-->
+          <dialog>
+            <x-box vertical style="margin-left: 10px; margin-top: 50px;">
+              <!--Búsqueda por título-->
+              <x-box>
+                <x-input skin="flat" id="txtBuscar">
+                  <x-icon name="search"></x-icon>
+                  <x-label>Búsqueda por pelicula</x-label>
+                </x-input>
+                <x-button style="margin-left: 10px;" id="btnBuscar">
+                  <x-icon name="search"></x-icon>
+                </x-button>
+              </x-box>
+
+              <!--Búsqueda por autor-->
+              <x-box style="margin-top: 50px;">
+                <x-input skin="flat" id="txtBuscarAutor">
+                  <x-icon name="search"></x-icon>
+                  <x-label>Búsqueda por Autor</x-label>
+                </x-input>
+                <x-button style="margin-left: 10px;" id="btnBuscarAutor">
+                  <x-icon name="search"></x-icon>
+                </x-button>
+              </x-box>
+
+              <!--Búsqueda por duracion-->
+              <x-box style="margin-top: 50px;">
+                <x-input skin="flat" id="txtBuscarDuracion">
+                  <x-icon name="search"></x-icon>
+                  <x-label>Búsqueda por Duracion</x-label>
+                </x-input>
+                <x-button style="margin-left: 10px;" id="btnBuscarDuracion">
+                  <x-icon name="search"></x-icon>
+                </x-button>
+              </x-box>
+
+            </x-box>
+          </dialog>
+          <!--FIN Panel BÚSQUEDAS-->
+        </x-button>
+        <!--FIN Botón BÚSQUEDAS-->
+
+        <!--Botón NUEVA PELICULA-->
+        <x-button skin="textured" style="margin-left:5%">
+          <x-box>
+            <x-icon name="add"></x-icon>
+          </x-box>
+
+          <!--Panel  NUEVO LIBRO-->
+          <dialog>
+            <x-box vertical style="margin-left: 50px; margin-top: 50px;">
+              <!--Búsqueda por título-->
+              
+                <x-input skin="flat" id="txtNuevotitulo">
+                  <x-icon name="title"></x-icon>
+                  <x-label>Título nueva pelicula</x-label>
+                </x-input>
+
+                <x-input skin="flat" id="txtNuevoAutor">
+                  <x-icon name="person"></x-icon>
+                  <x-label>Autor nueva pelicula</x-label>
+                </x-input>
+
+                <x-input skin="flat" id="txtNuevaImagen">
+                  <x-icon name="image"></x-icon>
+                  <x-label>Imagen nueva pelicula</x-label>
+                </x-input>
+
+                <x-input skin="flat" id="txtNuevaDuration">
+                  <x-icon name="timer"></x-icon>
+                  <x-label>Duracion nueva pelicula</x-label>
+                </x-input>
+                
+                <x-button style="margin-top: 20px;" id="btnNuevaPelicula">
+                  <x-icon name="add"></x-icon>
+                </x-button>
+              
+            </x-box>
+          </dialog>
+          <!--FIN Panel  NUEVO LIBRO-->
+        </x-button>
+        <!--FIN Botón  NUEVO LIBRO-->
+
+        <x-button skin="textured"  style="margin-left:5%">
+          <x-box>
+            <x-icon name="delete"></x-icon>
+          </x-box>
+          <dialog>
+            <x-box vertical style="margin-left: 50px; margin-top: 50px;">
+              <!--Búsqueda por título-->
+              <x-box>
+                <x-input skin="flat" id="txtBorrar">
+                  <x-icon name="search"></x-icon>
+                  <x-label>Borrar por titulo pelicula</x-label>
+                </x-input>
+                <x-button style="margin-left: 10px;" id="btnBorrarLibro">
+                  <x-icon name="delete"></x-icon>
+                </x-button>
+              </x-box>
+            </dialog>
+        </x-button>
+
+        <!--FIN TODOS-->
+      </x-box>
+    </header>
+    <div class="window-content" style="background-color: black;">
+      <div class="pane-group">
+        <!--panel imágenes-->
+        <div class="pane">
+          <div class="wrapper" id="wrapper">
+            <!--Contenido de los libros-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Añadimos un pie para poner los botones-->
+    <footer class="toolbar toolbar-footer" style="text-align: center;">
+      <p>Creado por Alejandro Viu</p>
+    </footer>
+  </div>
+  <x-notification id="notification" timeout="2000"></x-notification>
+  <script>require('./app.js')</script>
+</body>
+
+</html>

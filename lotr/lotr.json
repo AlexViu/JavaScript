@@ -1,0 +1,38 @@
+[
+    {
+    "title":"el señor de los anillos la comunidad del anillo",
+    "author":"Peter Jackson",
+    "duration":"178 minutos",
+    "img":"0.jpg"
+    },
+    {
+    "title":"el señor de los anillos las dos torres",
+    "author":"Peter Jackson",
+    "duration":"235 minutos",
+    "img":"1.jpeg"
+    },
+    {
+    "title":"el señor de los anillos el retorno del rey",
+    "author":"Peter Jackson",
+    "duration":"254 minutos",
+    "img":"2.jpeg"
+    },
+    {
+    "title":"el hobbit un vieaje inesperado",
+    "author":"Peter Jackson",
+    "duration":"182 minutos",
+    "img":"3.jpeg"
+    },
+    {
+    "title":"El hobbit la desolación de Smaug",
+    "author":"Peter Jackson",
+    "duration":"186 minutos",
+    "img":"4.jpg"
+    },
+    {
+    "title":"El hobbit la batalla de los Cinco Ejércitos",
+    "author":"Peter Jackson",
+    "duration":"164 minutos",
+    "img":"5.jpeg"
+    }
+]
